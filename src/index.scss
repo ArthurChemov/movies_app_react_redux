@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: rgb(55 55 55);
+}
+
+:root {
+    color-scheme: dark;
+}

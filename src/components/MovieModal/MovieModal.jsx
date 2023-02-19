@@ -1,7 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint-disable array-callback-return */
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-len */
 import React from 'react';
 import { AiFillStar, AiOutlinePlayCircle } from 'react-icons/ai';
 import { IoMdClose } from 'react-icons/io';

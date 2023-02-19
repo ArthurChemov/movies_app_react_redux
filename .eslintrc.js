@@ -28,5 +28,10 @@ module.exports = {
     'no-use-before-define': 'off',
     'prefer-arrow-callback': 'off',
     'import/prefer-default-export': 'off',
+    'no-unused-vars': 'off',
+    'consistent-return': 'off',
+    'array-callback-return': 'off',
+    'max-len': 'off',
+    'quote-props': 'off',
   },
 };

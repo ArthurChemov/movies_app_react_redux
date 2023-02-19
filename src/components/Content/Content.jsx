@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { AiFillForward, AiFillStar } from 'react-icons/ai';
 import { BiTrendingUp } from 'react-icons/bi';

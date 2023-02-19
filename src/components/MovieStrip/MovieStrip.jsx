@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-len */
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';

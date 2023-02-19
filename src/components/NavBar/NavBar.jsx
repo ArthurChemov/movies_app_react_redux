@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useDetectClickOutside } from 'react-detect-click-outside';
 import SearchResults from '../SearchResults/SearchResults';

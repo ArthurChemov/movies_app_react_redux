@@ -1,5 +1,3 @@
-/* eslint-disable quote-props */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import SideTile from '../SideTile/SideTile';
 

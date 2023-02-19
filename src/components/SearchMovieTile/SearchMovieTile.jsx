@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';

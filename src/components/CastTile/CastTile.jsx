@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function CastTile(props) {
   return (
         <div className="flex p-3  hover:bg-neutral-700 2 select-none duration-100">

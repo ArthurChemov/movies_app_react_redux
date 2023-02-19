@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import axios from 'axios';
 
 const instance = axios.create({
@@ -14,7 +13,6 @@ instance.interceptors.request.use(
     return config;
   },
   (error) => {
-    console.log('REQUEST ERROR');
     return Promise.reject(error);
   },
 );

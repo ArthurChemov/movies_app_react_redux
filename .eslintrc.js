@@ -19,6 +19,7 @@ module.exports = {
     },
   },
   rules: {
+    radix: 'off',
     'no-plusplus': 'off',
     'no-new': 'off',
     'no-mixed-operators': 'off',
@@ -26,5 +27,6 @@ module.exports = {
     'no-return-assign': 'off',
     'no-use-before-define': 'off',
     'prefer-arrow-callback': 'off',
+    'import/prefer-default-export': 'off',
   },
 };

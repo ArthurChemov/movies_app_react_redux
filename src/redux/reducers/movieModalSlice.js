@@ -6,10 +6,12 @@ export const movieModalSlice = createSlice({
     enabled: false,
     movieId: 27205,
   },
+
   reducers: {
     hide: (state) => {
       state.enabled = false;
     },
+
     showMovie: (state, action) => {
       state.enabled = true;
       state.movieId = action.payload;

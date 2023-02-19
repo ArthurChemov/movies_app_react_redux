@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { configureStore } from '@reduxjs/toolkit';
 import movieModalReducer from './reducers/movieModalSlice';
 import selectedGenresSlice from './reducers/selectedGenresSlice';
@@ -8,4 +7,5 @@ export const store = configureStore({
     movieModal: movieModalReducer,
     selectedGenres: selectedGenresSlice,
   },
+
 });

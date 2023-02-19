@@ -9,16 +9,14 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].js',
     clean: true,
-    assetModuleFilename: '[name][ext]',
   },
   devtool: 'source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    port: 8080,
     open: true,
     hot: true,
   },
@@ -46,8 +44,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: './public/favicon.ico',
       filename: 'index.html',
-      template: './public/index.html',
+      manifest: './public/manifest.json',
+      template: path.join(__dirname, 'public', 'index.html'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].scss',
@@ -55,10 +55,5 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      '@': [
-        path.resolve(__dirname, 'src'),
-      ],
-    },
   },
 };

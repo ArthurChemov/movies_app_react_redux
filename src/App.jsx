@@ -13,8 +13,8 @@ function App() {
   return (
         <div>
             <div className="flex flex-col">
-                <NavBar/>
-                <div className="flex h-fit">
+                <NavBar className="fixed"/>
+                <div className="flex h-fit mt-[74px]">
                     <SideBar/>
                     <Content/>
                 </div>

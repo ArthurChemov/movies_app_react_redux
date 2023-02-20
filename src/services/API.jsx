@@ -12,9 +12,7 @@ instance.interceptors.request.use(
     config.headers.Authorization = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNjdiYTRmOWIwODBhNmEwNDQxMmNmMTIwYTU4YjM4NiIsInN1YiI6IjYzNDYyZGY5MDBmYjZiMDA3OWY0ODllMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dsI7u_kFT_X0nXLUQOsTMDL2odaF2PhFr5pe2gU7V2M';
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  },
+  (error) => Promise.reject(error),
 );
 
 export default instance;

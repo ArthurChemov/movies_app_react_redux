@@ -20,7 +20,7 @@ export default function NavBar() {
   }
 
   return (
-        <div className="p-4 drop-shadow-xl flex bg-neutral-800 sticky top-0 z-40 w-screen">
+        <div className="p-4 drop-shadow-xl flex bg-neutral-800 top-0 z-40 w-screen fixed">
             <form className="relative flex w-1/2  ml-10" ref={ref}>
                 <input
                     type="text" id="simple-search"

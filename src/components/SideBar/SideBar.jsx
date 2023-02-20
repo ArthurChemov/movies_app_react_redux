@@ -4,7 +4,7 @@ import SideTile from '../SideTile/SideTile';
 export default function SideBar() {
   const [genres, setGenres] = React.useState([]);
   React.useEffect(() => {
-    setGenres((prevState) => sampleGenreData.genres.map((genre, i) => <SideTile
+    setGenres(() => sampleGenreData.genres.map((genre, i) => <SideTile
                     key={genre.id}
                     genre={genre}
                     pos={i}

@@ -1,11 +1,15 @@
 {
-  "name": "chess_pure_js",
+  "name": "movies_app_react_redux",
   "version": "1.0.0",
   "description": "",
   "main": "./src/js/script.js",
+  "homepage": "https://https://arthurchemov.github.io/movies_app_react_redux/",
   "scripts": {
     "serve": "webpack serve --mode development",
-    "build": "webpack --watch --mode production"
+    "build_webpack": "webpack --watch --mode production",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +37,7 @@
     "css-loader": "^6.7.3",
     "eslint": "^8.34.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
@@ -45,5 +50,17 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

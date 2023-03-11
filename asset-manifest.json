@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "//arthurchemov.github.io/movies_app_react_redux/static/css/main.171e8fb5.css",
-    "main.js": "//arthurchemov.github.io/movies_app_react_redux/static/js/main.ec99fe80.js",
+    "main.css": "//arthurchemov.github.io/movies_app_react_redux/static/css/main.d66eb4f4.css",
+    "main.js": "//arthurchemov.github.io/movies_app_react_redux/static/js/main.80a44971.js",
     "index.html": "//arthurchemov.github.io/movies_app_react_redux/index.html",
-    "main.171e8fb5.css.map": "//arthurchemov.github.io/movies_app_react_redux/static/css/main.171e8fb5.css.map",
-    "main.ec99fe80.js.map": "//arthurchemov.github.io/movies_app_react_redux/static/js/main.ec99fe80.js.map"
+    "main.d66eb4f4.css.map": "//arthurchemov.github.io/movies_app_react_redux/static/css/main.d66eb4f4.css.map",
+    "main.80a44971.js.map": "//arthurchemov.github.io/movies_app_react_redux/static/js/main.80a44971.js.map"
   },
   "entrypoints": [
-    "static/css/main.171e8fb5.css",
-    "static/js/main.ec99fe80.js"
+    "static/css/main.d66eb4f4.css",
+    "static/js/main.80a44971.js"
   ]
 }

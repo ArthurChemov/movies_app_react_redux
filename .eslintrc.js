@@ -33,5 +33,6 @@ module.exports = {
     'array-callback-return': 'off',
     'max-len': 'off',
     'quote-props': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

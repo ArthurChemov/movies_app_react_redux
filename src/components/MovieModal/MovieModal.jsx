@@ -4,6 +4,7 @@ import { IoMdClose } from 'react-icons/io';
 import { TbRotate360 } from 'react-icons/tb';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion, useAnimationControls } from 'framer-motion';
+import Media from 'react-media';
 import API from '../../services/API';
 import { hide, selectMovieId } from '../../redux/reducers/movieModalSlice';
 import CastTile from '../CastTile/CastTile';
@@ -68,7 +69,7 @@ export default function MovieModal() {
 
   return (
         <motion.div
-            className="absolute bg-neutral-800 rounded-xl text-neutral-100 w-[700px] h-96 drop-shadow-2xl"
+            className="absolute bg-neutral-800 rounded-xl max-w-[700px] h-96 text-neutral-100 drop-shadow-2xl"
             animate={controls}
         >
             <div className="flex gap-2 absolute right-3 top-3">
@@ -95,14 +96,15 @@ export default function MovieModal() {
             </div>
             {
                 !flipped
-                  ? <div className="flex">
+                  ? <div className=' m-3'><Media query="screen and (min-width: 730px)" render={() => (
+                    <div className="flex">
                     <div className="flex-shrink-0 h-96 relative cursor-pointer" onClick={getTrailer}>
                         <img
-                            className="h-96 rounded-l-xl "
+                            className="h-[360px]"
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                             alt="Couldn't find image"
                         />
-                        <div className="absolute top-0 left-0 w-full h-full bg-neutral-900 block opacity-0 hover:opacity-30 duration-300 flex items-center justify-center active:opacity-50">
+                        <div className="absolute top-0 left-0 w-full h-full bg-neutral-900 opacity-0 hover:opacity-30 duration-300 flex items-center justify-center active:opacity-50">
                             <AiOutlinePlayCircle size={64}/>
                         </div>
                     </div>
@@ -143,7 +145,57 @@ export default function MovieModal() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>)}/>
+                <Media query="screen and (max-width: 729px)" render={() => (
+                  <div className=""><div className=" flex items-center justify-center">
+                  <div className="flex-shrink-0 w-[128px] relative cursor-pointer bottom-6" onClick={getTrailer}>
+                      <img
+                          className=" w-[128px] h-[192px] flex items-center justify-center"
+                          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                          alt="Couldn't find image"
+                      />
+                      <div className="absolute top-0 left-0 w-full h-full bg-neutral-900 opacity-0 hover:opacity-30 duration-300 flex items-center justify-center active:opacity-50">
+                          <AiOutlinePlayCircle size={24}/>
+                      </div>
+                  </div>
+
+                  <div className="">
+                      <div className="p-3 flex flex-col h-96">
+                          <h1 className="text-3xl ">{movie.title}</h1>
+                          <div className="flex items-center gap-1">
+                              <AiFillStar size="8" color="#EAB308"/>
+                              <h4 className="text-sm text-neutral-500">{movie.vote_average} • {movie.vote_count} votes
+                                  • {movie.release_date}</h4>
+                          </div>
+                          <div className="space-y-2">
+                              <h4 className="text-sm text-neutral-300 line-clamp-5">
+                                  <strong>Overview: </strong>
+                                  {movie.overview}
+                              </h4>
+                              <h4 className="text-sm text-neutral-300 line-clamp-1">
+                                  <strong>Genres: </strong>
+                                  {genres}
+                              </h4>
+                              { runtime
+                                  && <h4 className="text-sm text-neutral-300 line-clamp-1">
+                                      <strong>Runtime: </strong>
+                                      {runtime}
+                                  </h4>
+                              }
+                              { watchProviders.length > 0
+                                  && <div className="flex flex-col gap-1.5 ">
+                                      <h4 className="text-sm text-neutral-300 line-clamp-6">
+                                          <strong>Watch Providers: </strong>
+                                      </h4>
+                                      <div className="flex ">
+                                          {watchProviders}
+                                      </div>
+                                  </div>
+                              }
+                          </div>
+                      </div>
+                  </div>
+              </div></div>)}/></div>
                   : <div className="h-96 flex flex-col">
                     <div className="flex gap-1 items-center p-3">
                         <h1 className="text-neutral-200">Credits</h1>

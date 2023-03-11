@@ -31,7 +31,6 @@ export default function SearchMovieTile(props) {
                         <AiFillStar size={12} />
                         <p className="text-xs text-neutral-400 ml-1">{`${props.movie.vote_average} • ${props.movie.vote_count.toLocaleString()} votes • ${year[0] || 'N/A'}`}</p>
                     </div>
-                    <p className="text-xs text-neutral-500 line-clamp-1">{props.movie.overview}</p>
                 </div>
             </div>
         </motion.div>
